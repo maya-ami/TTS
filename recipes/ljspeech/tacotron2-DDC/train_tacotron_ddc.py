@@ -10,11 +10,11 @@ from TTS.utils.audio import AudioProcessor
 
 # from TTS.tts.datasets.tokenizer import Tokenizer
 
-output_path = os.path.dirname(os.path.abspath(__file__))
+output_path = "/kaggle/working/"
 
 # init configs
 dataset_config = BaseDatasetConfig(
-    name="ljspeech", meta_file_train="metadata.csv", path=os.path.join(output_path, "/kaggle/input/ljspeech11/LJSpeech-1.1/")
+    name="ljspeech", meta_file_train="metadata.csv", path="/kaggle/input/ljspeech11/LJSpeech-1.1/"
 )
 
 audio_config = BaseAudioConfig(
