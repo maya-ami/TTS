@@ -340,7 +340,7 @@ class BaseTrainingConfig(Coqpit):
     log_model_step: int = None
     wandb_entity: str = None
     # checkpointing
-    save_step: int = 10000
+    save_step: int = 500
     checkpoint: bool = True
     keep_all_best: bool = False
     keep_after: int = 10000
