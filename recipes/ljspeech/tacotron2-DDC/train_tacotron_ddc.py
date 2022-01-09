@@ -14,13 +14,13 @@ output_path = "/kaggle/working/"
 
 # init configs
 dataset_config = BaseDatasetConfig(
-    name="ljspeech", meta_file_train="metadata.csv", path="/kaggle/input/ljspeech11/LJSpeech-1.1/"
+    name="ljspeech", meta_file_train="metadata.csv", path="/kaggle/input/ljspeech11/LJSpeech-1.1-20220106T094425Z-001/LJSpeech-1.1/"
 )
 
 audio_config = BaseAudioConfig(
     sample_rate=22050,
     do_trim_silence=True,
-    trim_db=60.0,
+    trim_db=45.0,
     signal_norm=False,
     mel_fmin=0.0,
     mel_fmax=8000,
@@ -28,6 +28,7 @@ audio_config = BaseAudioConfig(
     log_func="np.log",
     ref_level_db=20,
     preemphasis=0.0,
+    stats_path="/kaggle/input/ljspeech11/stats.npy"
 )
 
 config = Tacotron2Config(  # This is the config that is saved for the future use
